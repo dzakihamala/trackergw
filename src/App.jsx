@@ -328,10 +328,10 @@ function App() {
   // Derived State (Data Source)
   const selectedAgenda = useMemo(() => agendas.find(a => a.id === selectedId) || null, [agendas, selectedId]);
 
-  // Sounds
-  const [playWorkDone] = useSound('/work.mp3');
-  const [playBreakDone] = useSound('/break.mp3');
-  const [playComplete] = useSound('/finish.mp3');
+// Sounds
+  const [playWorkDone] = useSound('/trackergw/work.mp3');
+  const [playBreakDone] = useSound('/trackergw/break.mp3');
+  const [playComplete] = useSound('/trackergw/finish.mp3');
 
   // DnD
   const sensors = useSensors(useSensor(PointerSensor), useSensor(KeyboardSensor, { coordinateGetter: sortableKeyboardCoordinates }));
